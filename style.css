@@ -948,3 +948,55 @@ footer {
     white-space: nowrap;
 }
 
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    /* Header */
+    .header-nav {
+        display: none; /* hide desktop nav */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 200px;
+        background-color: var(--background-light);
+        padding: 1rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .header-nav.active { display: flex; }
+
+    .nav-links { flex-direction: column; gap: 1rem; }
+
+    /* Hero Section */
+    .hero-section {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 1rem;
+        padding: 2rem 1rem;
+    }
+
+    .hero-content { align-items: center; }
+    .hero-buttons { justify-content: center; flex-wrap: wrap; gap: 0.5rem; }
+
+    /* Features / Info Grids */
+    .features-grid, .info-grid {
+        grid-template-columns: 1fr; /* single column for mobile */
+        gap: 1rem;
+    }
+
+    /* Benefits Section */
+    .benefit-row, .benefit-row-reverse {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    /* CTA Section */
+    .cta-section { flex-direction: column; text-align: center; gap: 1rem; }
+    .cta-actions { flex-direction: column; gap: 0.5rem; }
+
+    /* Footer */
+    .footer-grid { grid-template-columns: 1fr; gap: 1rem; }
+}
+
